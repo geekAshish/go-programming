@@ -27,6 +27,17 @@ func main() {
 	numbersSlice := []int{1,2,3,4,5}
 	// addNumbers(1,2,3,4,5)
 	addNumbers(numbersSlice...)
+
+
+	// Clousers 
+	counterFunction := counter()
+
+	counterFunction()
+	counterFunction()
+	counterFunction()
+	counterSum := counterFunction()
+	fmt.Println(counterSum)
+
 }
 
 // for same type param : a, b int
@@ -59,4 +70,15 @@ func addNumbers(nums ...int) {
 
 	fmt.Println(sum)
 	// return sum
+}
+
+
+// Clousers, like JavaScript
+func counter () func() int {
+	count := 0
+
+	return func () int {
+		count += 1
+		return count
+	}
 }
