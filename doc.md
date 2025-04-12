@@ -11,3 +11,12 @@ go run main.go
 # Go Routine
 
 # Channels
+
+# Packages
+
+- https://pkg.go.dev/
+
+- go get github.com/fatih/color
+
+- use the like and run this
+  go mod tidy
