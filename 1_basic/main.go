@@ -1,8 +1,10 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"maps"
+	"os"
 	"slices"
 	"time"
 )
@@ -38,6 +40,13 @@ func main() {
 	if age := 122; age > 18 {
 		fmt.Println("ashish")
 	}
+
+	// comma ok syntax
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Enter your name:")
+
+	name, _ := reader.ReadString('\n')
+	fmt.Println("Hello", name)
 
 	// switch_function()
 	// forLoop()
