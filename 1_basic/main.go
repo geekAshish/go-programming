@@ -9,6 +9,11 @@ import (
 
 func main() {
 	// string, int, flot, bool, bytes
+	// int -> int8, int16, int32, int64
+	// uint -> uint8, uint16, uint32, uint64, uintptr
+	// float -> float32, float64
+	// complex -> complex64, complex128
+	// Array, slice, map, struct, channel, function, interface, pointer
 	fmt.Println(7/3)
 	fmt.Println(7.0/3.0)
 

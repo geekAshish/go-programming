@@ -10,6 +10,11 @@ go build main.go
 
 go run main.go
 
+# Lexer
+
+it's tell you, if your're following the rule or not
+e.g. some places lexer puts the semi colon ;
+
 # Go Routine
 
 # Channels
