@@ -4,6 +4,8 @@
 4. Concurrency model
 5. Static typing and compilation
 
+go mod init gihub.com/geekAshish/project-name
+
 go build main.go
 
 go run main.go
