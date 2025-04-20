@@ -134,10 +134,13 @@ func slices_function() {
 
 	// 2. if don't want nil value
 	// capacity -> maximum pumbers of elements can fit
-	var nums = make([]int, 5, 10)
+	var nums = make([]int, 2, 10)
 	nums2 := []int{}
 
-	nums = append(nums, 1)
+	nums[0] = 1
+	nums[1] = 4
+	// nums[3] = 4// out of range error, can't add value to index 3, because length is 2
+	nums = append(nums, 1) // but use append to add values
 	nums = append(nums, 222)
 	nums2 = append(nums2, 222)
 	fmt.Println(nums, cap(nums), nums2)
