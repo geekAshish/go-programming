@@ -73,4 +73,5 @@ func main() {
 	myOrder.changeStatus("confirm")
 
 	fmt.Println(myOrder, myOrder.amount, myOrder.status, myOrder.getAmount(), myLanguage, myLanguage.name, myOrder.customer,  myOrder.customer.name)
+	fmt.Printf("%+v", myOrder)
 }
