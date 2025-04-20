@@ -98,6 +98,7 @@ func switch_function()  {
 			fmt.Println("it's workday")
 	}
 
+	// fallthrough
 
 
 	// type switch
