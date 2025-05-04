@@ -4,6 +4,10 @@
 4. Concurrency model
 5. Static typing and compilation
 
+https://go.dev/blog/using-go-modules
+golang.org/ref/mod
+github.com/gorilla/mux
+
 go env
 
 go mod init gihub.com/geekAshish/project-name
