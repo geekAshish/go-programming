@@ -95,3 +95,10 @@ func CreateCourse(w http.ResponseWriter, r *http.Request) {
 
 	json.NewEncoder(w).Encode(course)
 }
+
+func UpdateCourse(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
+	// get param value
+	// params := mux.Vars(r)
+}
