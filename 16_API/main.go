@@ -32,7 +32,21 @@ func (c *Course) IsEmpty() bool {
 }
 
 func main() {
+	r := mux.NewRouter()
 
+	// seeding
+	courses = append(courses, Course{CourseId: "2", CourseName: "a", CoursePrice: 22, Auther: &Auther{Fullname: "44", Website: "website.com"}})
+
+	// routing
+	r.HandleFunc("/", ServeHome).Methods("GET")
+	r.HandleFunc("/courses", GetAllCourses).Methods("GET")
+	r.HandleFunc("/course/{id}", GetOneCourses).Methods("GET")
+	r.HandleFunc("/course", CreateCourse).Methods("POST")
+	r.HandleFunc("/course/{id}", UpdateCourse).Methods("PUT")
+	// r.HandleFunc("/course/{id}", deleteCourse).Methods("DELETE")
+
+	// listen to a port
+	http.ListenAndServe(":4000", r)
 }
 
 // controllers - file
