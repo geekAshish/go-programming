@@ -34,3 +34,11 @@ e.g. some places lexer puts the semi colon ;
 
 - use the like and run this
   go mod tidy
+
+# MongoDB
+
+go mod init github.com/geekashish
+
+go get -u github.com/gorilla/mux
+
+go.mongodb.org
