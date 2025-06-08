@@ -83,3 +83,15 @@ func deleteOneMovie(movieId string) {
 
 	fmt.Println(deleteCount)
 }
+
+func deleteAllMovie() int64 {
+	deleteResult, err := collection.DeleteMany(context.Background(), bson.D{{}}, nil)
+
+		if err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Println(deleteResult.DeletedCount)
+
+	return deleteResult.DeletedCount
+}
