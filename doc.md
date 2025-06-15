@@ -42,3 +42,7 @@ go mod init github.com/geekashish
 go get -u github.com/gorilla/mux
 
 go.mongodb.org
+
+# go routine
+
+using go routine we achive parallelism
