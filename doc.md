@@ -46,3 +46,5 @@ go.mongodb.org
 # go routine
 
 using go routine we achive parallelism
+
+multiple goroutines can share resource for reading purpose

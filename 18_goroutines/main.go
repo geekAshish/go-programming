@@ -6,7 +6,11 @@ import (
 	"sync"
 )
 
+var signles = []string{"test"}
+
 var wg sync.WaitGroup // usualy these are pointers
+var mut sync.Mutex // usualy these are pointers
+
 
 func main() {
 	greet("hey")
@@ -31,12 +35,16 @@ func greet(s string) {
 // wait group
 func getStatusCode(endpoint string) {
 	wg.Done()
-	
+
 	res, err := http.Get(endpoint)
 
 	if err != nil {
 		fmt.Println("OOPS in endpoint")
+	} else {
+		mut.Lock()	
+		signles = append(signles, endpoint)
+		mut.Unlock()
+		
+		fmt.Println(res.StatusCode, endpoint)
 	}
-
-	fmt.Println(res.StatusCode, endpoint)
 }
