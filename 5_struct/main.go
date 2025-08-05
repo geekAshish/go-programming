@@ -32,11 +32,11 @@ func newOrder(id string, amount float32, status string) *order {
 	return &myOrder
 }
 
-// receiver type
+// receiver type: pointer reciever
 func (o *order) changeStatus(status string) {
 	o.status = status
 }
-// just to get value no need to use pointers
+// Value reciever : just to get value no need to use pointers
 func (o order) getAmount() float32 {
 	return o.amount
 }
