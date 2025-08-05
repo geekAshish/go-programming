@@ -19,6 +19,16 @@ func main() {
 	sum , sub := namedReturnValues(10, 5)
 	fmt.Println(sum, sub)
 
+	// Anonymous Function
+	sum1, sub1 := func(a, b int) (sum1 int, sub1 int) {
+		sum1 = a + b
+		sub1 = a - b
+		return
+	}(2, 3)
+
+	fmt.Println(sum1, " ", sub1)
+
+
 	// Take Function
 	takeFuncParam(anotherFunc)
 	
