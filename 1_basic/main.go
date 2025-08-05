@@ -18,6 +18,7 @@ func main() {
 	// Array, slice, map, struct, channel, function, interface, pointer
 	fmt.Println(7/3)
 	fmt.Println(7.0/3.0)
+	// println("Hello World") // println is not recommended, It might get removed from GO, use fmt.Println
 
 	var favNumber float32 = 6.00;
 	favNumber = 55
