@@ -6,7 +6,7 @@ func main() {
 	sum := add(1, 2)
 	fmt.Println(sum)
 
-  // Returning Multiple Values
+  	// Returning Multiple Values
 	v1, v2, v3 := returnMultipleValues()
 	fmt.Println(v1, v2, v3)
 
@@ -14,6 +14,10 @@ func main() {
 	anotherFunc := func (a int) int  {
 		return a
 	}
+
+	// Named Return Values
+	sum , sub := namedReturnValues(10, 5)
+	fmt.Println(sum, sub)
 
 	// Take Function
 	takeFuncParam(anotherFunc)
@@ -48,6 +52,14 @@ func add(a int, b int) int {
 func returnMultipleValues() (string, string, int) {
 	return "golang", "typescript", 2
 }
+
+// Named Return Values
+func namedReturnValues(a, b int) (sum int, sub int) {
+	sum = a + b
+	sub = a - b
+	return
+}
+
 
 func takeFuncParam(fn func(a int) int) {
 	fn(2)
