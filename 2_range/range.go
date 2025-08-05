@@ -11,6 +11,10 @@ func main() {
 		fmt.Println(sum, index)
 	}
 
+	for range 5 {
+		fmt.Println("Hello")
+	}
+
 
 	// with map
 	player := map[string]string{"name": "ashish", "class": "older"}
