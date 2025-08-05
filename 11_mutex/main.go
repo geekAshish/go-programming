@@ -6,6 +6,7 @@ import (
 )
 
 // while doing mutilthreading, to prevent race condition we use mutex
+// lock the variable to the multiple thread don't access it at the same time
 
 type post struct {
 	views int
